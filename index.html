@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>LoveU</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f4f6f8;
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.45);
+    }
+    .card {
+      background: #fff;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      max-width: 480px;
+      text-align: center;
+      animation: fadeIn 0.4s ease;
+    }
+    button {
+      margin-top: 14px;
+      padding: 8px 14px;
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #2563eb;
+      color: #fff;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="modal" id="modal">
+    <div class="card">
+      <h1>Um bom dia pra você</h1>
+      <p>Que não é sobremesa de festa, mas... é um docinho.❤️</p>
+      <button onclick="document.getElementById('modal').style.display='none'">Fechar</button>
+    </div>
+  </div>
+</body>
+</html>
