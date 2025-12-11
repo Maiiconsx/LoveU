@@ -1,62 +1,80 @@
-<style>
-  /* 1. Definir o keyframes da animação */
-  @keyframes backgroundMovement {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>LoveU</title>
+  <style>
+    /* 1. CHAVES (KEYFRAMES) DA ANIMAÇÃO */
+    @keyframes backgroundMovement {
+      0% {
+        background-position: 0% 50%; /* Posição inicial */
+      }
+      50% {
+        background-position: 100% 50%; /* Posição intermediária */
+      }
+      100% {
+        background-position: 0% 50%; /* Volta à posição inicial */
+      }
+    }
 
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* 2. Aplicar o gradiente e o tamanho grande */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%; 
-    
-    /* 3. Aplicar a animação */
-    animation: backgroundMovement 15s ease infinite; 
-  }
-    
-  .modal {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.45);
-  }
-  .card {
-    background: #fff;
-    padding: 22px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    max-width: 480px;
-    text-align: center;
-    animation: fadeIn 0.4s ease;
-  }
-  button {
-    margin-top: 14px;
-    padding: 8px 14px;
-    border: 0;
-    border-radius: 6px;
-    cursor: pointer;
-    background: #2563eb;
-    color: #fff;
-    font-weight: bold;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-</style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      /* PROPRIEDADES DO FUNDO ANIMADO */
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%; 
+      animation: backgroundMovement 15s ease infinite; 
+      /* FIM DO FUNDO ANIMADO */
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .card {
+      background: #fff;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      max-width: 480px;
+      text-align: center;
+      animation: fadeIn 0.4s ease;
+    }
+
+    button {
+      margin-top: 14px;
+      padding: 8px 14px;
+      border: 0;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #2563eb;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="modal" id="modal">
+    <div class="card">
+      <h1>Um bom dia pra você</h1>
+      <p>Que não é sobremesa de festa, mas... é um docinho.❤️</p>
+      <button onclick="document.getElementById('modal').style.display='none'">Fechar</button>
+    </div>
+  </div>
+</body>
+</html>
